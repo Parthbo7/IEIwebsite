@@ -73,7 +73,7 @@ export const mainLinks = [
     id: "academic-hub",
     title: "Academic & Tech Resources",
     subtitle: "Study material, coding notes, past year papers & kits",
-    url: "https://drive.google.com",
+    url: "https://drive.google.com/drive/folders/1gVkTTFflCkJhgFyg9FkDR0JEBWWJ_pMm?usp=sharing",
     type: "drive",
     badge: "Free Access",
     color: "from-amber-500 to-orange-600",

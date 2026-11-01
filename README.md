@@ -30,6 +30,7 @@ npm run build
 - **Instagram Page:** [https://www.instagram.com/iei_it_mgmcoen](https://www.instagram.com/iei_it_mgmcoen?utm_source=ig_web_button_share_sheet&obrf=ZDNlZDc0MzIxNw==)
 - **LinkedIn Profile:** [https://www.linkedin.com/in/institute-of-engineers-iei-information-technology](https://www.linkedin.com/in/institute-of-engineers-iei-information-technology)
 - **Official Email:** [iei_it@mgmcen.ac.in](mailto:iei_it@mgmcen.ac.in)
+- **Academic & Tech Resources (Google Drive):** [Google Drive Folder](https://drive.google.com/drive/folders/1gVkTTFflCkJhgFyg9FkDR0JEBWWJ_pMm?usp=sharing)
 - **Apex Body Portal:** [The Institution of Engineers (India)](https://www.ieindia.org)
 
 ---
