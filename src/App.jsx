@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Share2, UserPlus, ExternalLink } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import ProfileHeader from './components/ProfileHeader';
 import LinkItem from './components/LinkItem';
 import LeadershipSection from './components/LeadershipSection';
@@ -72,6 +73,9 @@ export default function App() {
 
       {/* Share Modal Dialog */}
       <ShareModal isOpen={isShareOpen} onClose={() => setIsShareOpen(false)} />
+      
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
