@@ -1,0 +1,34 @@
+{
+  "name": "projects/9625211837219846932",
+  "projectId": "9625211837219846932",
+  "title": "IEI Student Chapter Linktree",
+  "visibility": "PRIVATE",
+  "createTime": "2026-11-01T09:16:53.250262Z",
+  "updateTime": "2026-11-01T09:21:02.238269Z",
+  "projectType": "TEXT_TO_UI_PRO",
+  "origin": "STITCH",
+  "deviceType": "MOBILE",
+  "designTheme": {
+    "colorMode": "LIGHT",
+    "font": "INTER",
+    "roundness": "ROUND_EIGHT",
+    "customColor": "#123b66"
+  },
+  "screens": {
+    "mobile": {
+      "id": "6ea82ed7ee6b47d3a7a0af2facd634ff",
+      "sourceScreen": "projects/9625211837219846932/screens/6ea82ed7ee6b47d3a7a0af2facd634ff",
+      "label": "IEI Student Chapter - Linktree Landing Page",
+      "width": 780,
+      "height": 2622
+    },
+    "desktop": {
+      "id": "b2344c0af2e24bd881384aa5dc4f306c",
+      "sourceScreen": "projects/9625211837219846932/screens/b2344c0af2e24bd881384aa5dc4f306c",
+      "label": "IEI Student Chapter - Desktop Linktree Hub",
+      "width": 2560,
+      "height": 4578
+    }
+  }
+}
+
