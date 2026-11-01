@@ -60,6 +60,20 @@ export default function Footer() {
             ({chapterInfo.leadership.president.phone})
           </a>
         </div>
+        {chapterInfo.leadership.vicePresident && (
+          <div>
+            <span className="font-semibold text-slate-700">Vice President:</span>{' '}
+            <span className="text-slate-800">{chapterInfo.leadership.vicePresident.name}</span>
+            {chapterInfo.leadership.vicePresident.phone && (
+              <a
+                href={`tel:${chapterInfo.leadership.vicePresident.phoneRaw}`}
+                className="text-blue-700 font-medium hover:underline inline-flex items-center gap-0.5 ml-1"
+              >
+                ({chapterInfo.leadership.vicePresident.phone})
+              </a>
+            )}
+          </div>
+        )}
         <div>
           <span className="font-semibold text-slate-700">Official Mail:</span>{' '}
           <a

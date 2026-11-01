@@ -5,6 +5,7 @@ import { chapterInfo } from '../data/linksData';
 export default function LeadershipSection() {
   const [copiedMail, setCopiedMail] = useState(false);
   const [copiedPhone, setCopiedPhone] = useState(false);
+  const [copiedVPPhone, setCopiedVPPhone] = useState(false);
   const { leadership } = chapterInfo;
 
   const handleCopyMail = (e) => {
@@ -19,6 +20,15 @@ export default function LeadershipSection() {
     navigator.clipboard.writeText(leadership.president.phoneRaw);
     setCopiedPhone(true);
     setTimeout(() => setCopiedPhone(false), 2000);
+  };
+
+  const handleCopyVPPhone = (e) => {
+    e.preventDefault();
+    if (leadership.vicePresident?.phoneRaw) {
+      navigator.clipboard.writeText(leadership.vicePresident.phoneRaw);
+      setCopiedVPPhone(true);
+      setTimeout(() => setCopiedVPPhone(false), 2000);
+    }
   };
 
   return (
@@ -83,27 +93,73 @@ export default function LeadershipSection() {
               </p>
               
               {/* Contact Pill with Call & Copy */}
-              <div className="flex items-center gap-2 mt-2">
-                <a
-                  href={`tel:${leadership.president.phoneRaw}`}
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 hover:text-blue-800 bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-2xs hover:border-blue-300 transition-all"
-                  title="Call President"
-                >
-                  <Phone className="w-3 h-3 text-blue-600" />
-                  <span>{leadership.president.phone}</span>
-                </a>
-                <button
-                  type="button"
-                  onClick={handleCopyPhone}
-                  aria-label="Copy phone number"
-                  className="p-1 rounded-md text-slate-400 hover:text-slate-700 bg-white border border-slate-200 hover:border-slate-300 transition-colors"
-                  title={copiedPhone ? "Copied!" : "Copy Number"}
-                >
-                  {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                </button>
-              </div>
+              {leadership.president.phone && (
+                <div className="flex items-center gap-2 mt-2">
+                  <a
+                    href={`tel:${leadership.president.phoneRaw}`}
+                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 hover:text-blue-800 bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-2xs hover:border-blue-300 transition-all"
+                    title="Call President"
+                  >
+                    <Phone className="w-3 h-3 text-blue-600" />
+                    <span>{leadership.president.phone}</span>
+                  </a>
+                  <button
+                    type="button"
+                    onClick={handleCopyPhone}
+                    aria-label="Copy phone number"
+                    className="p-1 rounded-md text-slate-400 hover:text-slate-700 bg-white border border-slate-200 hover:border-slate-300 transition-colors"
+                    title={copiedPhone ? "Copied!" : "Copy Number"}
+                  >
+                    {copiedPhone ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
+
+          {/* Student Chapter Vice President Card */}
+          {leadership.vicePresident && (
+            <div className="p-3.5 rounded-2xl bg-[#F8FAFC] border border-slate-200/80 hover:border-blue-200 transition-all flex items-start gap-3 group">
+              <div className="w-10 h-10 rounded-xl bg-indigo-700 text-white font-extrabold text-xs flex items-center justify-center flex-shrink-0 shadow-xs group-hover:scale-105 transition-transform mt-0.5">
+                {leadership.vicePresident.initials}
+              </div>
+              <div className="flex flex-col min-w-0 flex-1">
+                <div className="flex items-center justify-between">
+                  <span className="text-[9px] font-bold uppercase tracking-wider text-indigo-700 bg-indigo-50 px-1.5 py-0.5 rounded w-fit">
+                    Vice President
+                  </span>
+                </div>
+                <h3 className="text-xs sm:text-sm font-bold text-slate-800 mt-0.5 truncate">
+                  {leadership.vicePresident.name}
+                </h3>
+                <p className="text-[11px] text-slate-500 font-normal">
+                  {leadership.vicePresident.role}
+                </p>
+
+                {leadership.vicePresident.phone && (
+                  <div className="flex items-center gap-2 mt-2">
+                    <a
+                      href={`tel:${leadership.vicePresident.phoneRaw}`}
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 hover:text-blue-800 bg-white px-2.5 py-1 rounded-lg border border-slate-200 shadow-2xs hover:border-blue-300 transition-all"
+                      title="Call Vice President"
+                    >
+                      <Phone className="w-3 h-3 text-blue-600" />
+                      <span>{leadership.vicePresident.phone}</span>
+                    </a>
+                    <button
+                      type="button"
+                      onClick={handleCopyVPPhone}
+                      aria-label="Copy phone number"
+                      className="p-1 rounded-md text-slate-400 hover:text-slate-700 bg-white border border-slate-200 hover:border-slate-300 transition-colors"
+                      title={copiedVPPhone ? "Copied!" : "Copy Number"}
+                    >
+                      {copiedVPPhone ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Official Email Banner */}

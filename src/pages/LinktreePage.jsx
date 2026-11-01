@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ProfileHeader from '../components/ProfileHeader';
 import LinkItem from '../components/LinkItem';
-import LeadershipSection from '../components/LeadershipSection';
 import Footer from '../components/Footer';
 import ShareModal from '../components/ShareModal';
 import { mainLinks } from '../data/linksData';
@@ -22,9 +21,6 @@ export default function LinktreePage() {
             <LinkItem key={link.id} link={link} />
           ))}
         </section>
-
-        {/* Chapter Leadership Desk */}
-        <LeadershipSection />
 
         {/* Footer */}
         <Footer />

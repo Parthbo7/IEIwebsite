@@ -22,6 +22,12 @@ export const chapterInfo = {
       phoneRaw: "8177942863",
       initials: "PB"
     },
+    vicePresident: {
+      name: "Surabhi Toshniwal",
+      role: "IEI Student Chapter Vice President",
+      department: "B.Tech Information Technology",
+      initials: "ST"
+    },
     email: "iei_it@mgmcen.ac.in"
   }
 };
@@ -59,17 +65,6 @@ export const mainLinks = [
     color: "from-blue-600 to-blue-800",
     bgHover: "hover:border-blue-400",
     iconColor: "bg-[#0A66C2] text-white"
-  },
-  {
-    id: "youtube",
-    title: "YouTube Channel",
-    subtitle: "Watch tech talks, seminars, workshops & event recordings",
-    url: "https://www.youtube.com", // Configurable link
-    type: "youtube",
-    badge: "Video Library",
-    color: "from-red-500 to-red-700",
-    bgHover: "hover:border-red-300",
-    iconColor: "bg-red-600 text-white"
   },
   {
     id: "academic-hub",
