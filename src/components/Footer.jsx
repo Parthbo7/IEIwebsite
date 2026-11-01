@@ -51,7 +51,7 @@ export default function Footer() {
           <span className="text-slate-800">{chapterInfo.leadership.facultyCoordinator.name}</span>
         </div>
         <div>
-          <span className="font-semibold text-slate-700">Student President:</span>{' '}
+          <span className="font-semibold text-slate-700">President:</span>{' '}
           <span className="text-slate-800">{chapterInfo.leadership.president.name}</span>{' '}
           <a
             href={`tel:${chapterInfo.leadership.president.phoneRaw}`}

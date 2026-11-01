@@ -1,5 +1,5 @@
 import React from 'react';
-import { Home, Info, Award, Share2, X, PanelLeftClose } from 'lucide-react';
+import { Home, Info, Award, Share2, X } from 'lucide-react';
 import logoImg from '../assets/logo.png';
 import { chapterInfo } from '../data/linksData';
 
@@ -55,17 +55,6 @@ export default function Sidebar({
                   }}
                 />
               </div>
-
-              {/* Desktop Collapse / Hide Button */}
-              <button
-                type="button"
-                onClick={onToggleCollapse}
-                className="hidden lg:flex text-[#83a6d7] hover:text-white p-1.5 rounded-lg hover:bg-white/10 transition-colors"
-                title="Collapse Navigation Bar"
-                aria-label="Collapse Navigation Bar"
-              >
-                <PanelLeftClose className="w-5 h-5" />
-              </button>
 
               {/* Mobile Close Button */}
               <button
