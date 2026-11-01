@@ -4,7 +4,8 @@ export const chapterInfo = {
   title: "IEI Student Chapter",
   department: "Department of Information Technology",
   institution: "MGM's College of Engineering, Nanded",
-  motto: "“Connecting Minds, Inspiring Innovation, Building Future Engineers.”",
+  motto: "“Connecting Minds. Inspiring Innovation. Building Engineers.”",
+  session: "2026–2027",
   logo: logoImg,
   leadership: {
     facultyCoordinator: {
@@ -29,7 +30,7 @@ export const mainLinks = [
   {
     id: "whatsapp",
     title: "WhatsApp Community",
-    subtitle: "Join our student group for instant updates & events",
+    subtitle: "Join our official student chapter group for instant alerts",
     url: "https://chat.whatsapp.com/I9kEutpR8A9AugJvK0Tnzm",
     type: "whatsapp",
     badge: "Active Group",
@@ -39,8 +40,8 @@ export const mainLinks = [
   },
   {
     id: "instagram",
-    title: "Instagram Page",
-    subtitle: "Follow stories, reels, event photos & student highlights",
+    title: "Instagram",
+    subtitle: "Follow event stories, reels, team highlights & announcements",
     url: "https://www.instagram.com/iei_it_mgmcoen?utm_source=ig_web_button_share_sheet&obrf=ZDNlZDc0MzIxNw==",
     type: "instagram",
     badge: "@iei_it_mgmcoen",
@@ -50,40 +51,52 @@ export const mainLinks = [
   },
   {
     id: "linkedin",
-    title: "LinkedIn Network",
-    subtitle: "Connect with alumni, industry speakers & tech network",
+    title: "LinkedIn",
+    subtitle: "Connect with faculty, alumni network, and professional speakers",
     url: "https://www.linkedin.com/in/institute-of-engineers-iei-information-technology",
     type: "linkedin",
-    badge: "Professional Hub",
+    badge: "Professional Network",
     color: "from-blue-600 to-blue-800",
     bgHover: "hover:border-blue-400",
     iconColor: "bg-[#0A66C2] text-white"
   },
   {
-    id: "website",
-    title: "IEI India & MGM Portal",
-    subtitle: "Apex body charter, accreditation & college information",
-    url: "https://www.ieindia.org",
-    type: "website",
-    color: "from-slate-700 to-slate-900",
-    bgHover: "hover:border-slate-300",
-    iconColor: "bg-[#123B66] text-white"
+    id: "youtube",
+    title: "YouTube Channel",
+    subtitle: "Watch tech talks, seminars, workshops & event recordings",
+    url: "https://www.youtube.com", // Configurable link
+    type: "youtube",
+    badge: "Video Library",
+    color: "from-red-500 to-red-700",
+    bgHover: "hover:border-red-300",
+    iconColor: "bg-red-600 text-white"
   },
   {
     id: "academic-hub",
-    title: "Academic & Tech Resources",
-    subtitle: "Study material, coding notes, past year papers & kits",
+    title: "Google Drive",
+    subtitle: "Academic notes, syllabus, lab manuals & study resources",
     url: "https://drive.google.com/drive/folders/1gVkTTFflCkJhgFyg9FkDR0JEBWWJ_pMm?usp=sharing",
     type: "drive",
-    badge: "Free Access",
+    badge: "Study Materials",
     color: "from-amber-500 to-orange-600",
     bgHover: "hover:border-amber-300",
     iconColor: "bg-amber-500 text-white"
   },
   {
+    id: "event-registration",
+    title: "Event Registration",
+    subtitle: "Register for active technical workshops, hackathons & seminars",
+    url: "https://chat.whatsapp.com/I9kEutpR8A9AugJvK0Tnzm", // Points to active WhatsApp community for registration
+    type: "event",
+    badge: "Portal Link",
+    color: "from-indigo-600 to-blue-700",
+    bgHover: "hover:border-indigo-300",
+    iconColor: "bg-indigo-600 text-white"
+  },
+  {
     id: "official-email",
-    title: "Official Email Inquiry",
-    subtitle: "For collaborations, memberships & official correspondence",
+    title: "Official Email",
+    subtitle: "Direct inquiries for partnerships, membership & official correspondence",
     url: "mailto:iei_it@mgmcen.ac.in",
     type: "email",
     badge: "iei_it@mgmcen.ac.in",

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ChevronRight, Globe, Mail, FolderGit2, BookOpen } from 'lucide-react';
+import { ExternalLink, Globe, Mail, BookOpen, Calendar, Youtube } from 'lucide-react';
 
 function getIcon(type) {
   switch (type) {
@@ -21,10 +21,16 @@ function getIcon(type) {
           <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
         </svg>
       );
-    case 'website':
-      return <Globe className="w-5 h-5" />;
+    case 'youtube':
+      return (
+        <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+          <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+        </svg>
+      );
     case 'drive':
       return <BookOpen className="w-5 h-5" />;
+    case 'event':
+      return <Calendar className="w-5 h-5" />;
     case 'email':
       return <Mail className="w-5 h-5" />;
     default:
@@ -44,14 +50,14 @@ export default function LinkItem({ link }) {
       className={`link-card group flex items-center justify-between w-full p-3.5 sm:p-4 bg-white/95 backdrop-blur-xs rounded-2xl border border-slate-200/90 shadow-xs hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 ${link.bgHover}`}
     >
       <div className="flex items-center gap-3.5 min-w-0">
-        {/* Icon Container */}
+        {/* Platform Icon Container */}
         <div
           className={`w-11 h-11 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center flex-shrink-0 shadow-xs transition-transform duration-200 group-hover:scale-105 ${link.iconColor}`}
         >
           {getIcon(link.type)}
         </div>
 
-        {/* Labels and Description */}
+        {/* Platform Name and Details */}
         <div className="text-left min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h3 className="text-sm sm:text-base font-bold text-brand-navy group-hover:text-blue-700 transition-colors truncate">
@@ -69,11 +75,10 @@ export default function LinkItem({ link }) {
         </div>
       </div>
 
-      {/* Right Chevron */}
-      <div className="text-slate-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all flex-shrink-0 pl-2">
-        <ChevronRight className="w-5 h-5" />
+      {/* External Link Indicator & Arrow */}
+      <div className="flex items-center gap-1.5 text-slate-400 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all flex-shrink-0 pl-2">
+        <ExternalLink className="w-4 h-4" />
       </div>
     </a>
   );
 }
-

@@ -20,18 +20,65 @@
   transform: scale(0.985);
 }
 
-@keyframes pulse-subtle {
-  0%, 100% {
+@keyframes institutionalFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
     opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.85;
-    transform: scale(1.02);
+    transform: translateY(0);
   }
 }
 
-.animate-pulse-subtle {
-  animation: pulse-subtle 3s infinite ease-in-out;
+@keyframes spinClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
+@keyframes spinCounter {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.orbital-spin-clockwise {
+  animation: spinClockwise 60s linear infinite;
+  transform-origin: center center;
+}
+
+.orbital-spin-clockwise-slow {
+  animation: spinClockwise 36s linear infinite;
+  transform-origin: center center;
+}
+
+.orbital-spin-counter {
+  animation: spinCounter 45s linear infinite;
+  transform-origin: center center;
+}
+
+.orbital-spin-counter-fast {
+  animation: spinCounter 28s linear infinite;
+  transform-origin: center center;
+}
+
+.animate-institutional-fade-up {
+  animation: institutionalFadeUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .orbital-spin-clockwise,
+  .orbital-spin-clockwise-slow,
+  .orbital-spin-counter,
+  .orbital-spin-counter-fast,
+  .animate-institutional-fade-up {
+    animation: none !important;
+  }
+}
