@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Globe, Mail, BookOpen, Calendar, Youtube } from 'lucide-react';
+import { ExternalLink, Globe, Mail, BookOpen, Calendar, Youtube, MessageSquareText } from 'lucide-react';
 
 function getIcon(type) {
   switch (type) {
@@ -29,6 +29,9 @@ function getIcon(type) {
       );
     case 'drive':
       return <BookOpen className="w-5 h-5" />;
+    case 'feedback':
+    case 'form':
+      return <MessageSquareText className="w-5 h-5" />;
     case 'event':
       return <Calendar className="w-5 h-5" />;
     case 'email':

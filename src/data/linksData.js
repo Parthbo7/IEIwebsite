@@ -89,6 +89,17 @@ export const mainLinks = [
     iconColor: "bg-indigo-600 text-white"
   },
   {
+    id: "feedback",
+    title: "Feedback & Suggestions",
+    subtitle: "Share your feedback, ideas & suggestions for chapter activities",
+    url: "https://forms.gle/FTthFDT7K3C4xPT99",
+    type: "feedback",
+    badge: "Feedback Form",
+    color: "from-purple-600 to-indigo-700",
+    bgHover: "hover:border-purple-300",
+    iconColor: "bg-purple-600 text-white"
+  },
+  {
     id: "official-email",
     title: "Official Email",
     subtitle: "Direct inquiries for partnerships, membership & official correspondence",
